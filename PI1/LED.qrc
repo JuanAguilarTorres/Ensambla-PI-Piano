@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>LED/Off.png</file>
+        <file>LED/OnDo.png</file>
+        <file>LED/OnDoS.png</file>
+        <file>LED/OnFa.png</file>
+        <file>LED/OnFaS.png</file>
+        <file>LED/OnLa.png</file>
+        <file>LED/OnLaS.png</file>
+        <file>LED/OnMi.png</file>
+        <file>LED/OnRe.png</file>
+        <file>LED/OnReS.png</file>
+        <file>LED/OnSi.png</file>
+        <file>LED/OnSol.png</file>
+        <file>LED/OnSolS.png</file>
+    </qresource>
+</RCC>

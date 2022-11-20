@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>SFX/261.wav</file>
+        <file>SFX/277.wav</file>
+        <file>SFX/293.wav</file>
+        <file>SFX/311.wav</file>
+        <file>SFX/329.wav</file>
+        <file>SFX/349.wav</file>
+        <file>SFX/739.wav</file>
+        <file>SFX/783.wav</file>
+        <file>SFX/830.wav</file>
+        <file>SFX/880.wav</file>
+        <file>SFX/932.wav</file>
+        <file>SFX/987.wav</file>
+    </qresource>
+</RCC>
