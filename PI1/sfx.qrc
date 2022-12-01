@@ -6,11 +6,24 @@
         <file>SFX/311.wav</file>
         <file>SFX/329.wav</file>
         <file>SFX/349.wav</file>
+        <file>SFX/369.wav</file>
+        <file>SFX/391.wav</file>
+        <file>SFX/415.wav</file>
+        <file>SFX/440.wav</file>
+        <file>SFX/446.wav</file>
+        <file>SFX/493.wav</file>
+        <file>SFX/523.wav</file>
+        <file>SFX/554.wav</file>
+        <file>SFX/587.wav</file>
+        <file>SFX/622.wav</file>
+        <file>SFX/659.wav</file>
+        <file>SFX/698.wav</file>
         <file>SFX/739.wav</file>
         <file>SFX/783.wav</file>
         <file>SFX/830.wav</file>
         <file>SFX/880.wav</file>
         <file>SFX/932.wav</file>
         <file>SFX/987.wav</file>
+        <file>SFX/SFX</file>
     </qresource>
 </RCC>

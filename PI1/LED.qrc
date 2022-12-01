@@ -13,5 +13,6 @@
         <file>LED/OnSi.png</file>
         <file>LED/OnSol.png</file>
         <file>LED/OnSolS.png</file>
+        <file>LED/Fondo.png</file>
     </qresource>
 </RCC>

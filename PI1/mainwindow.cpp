@@ -7,6 +7,7 @@
 #include <QPixmap>
 #include <QThread>
 #include <iostream>
+#include <QKeyEvent>
 // Include de librerias tipo c.
 #include <unistd.h>
 //#include <windows.h>
@@ -16,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    this->vol = 100;
+//    this->vol = 100;
 //    ui->volLabel->setText("1");
     this->on = false;
     ui->setupUi(this);
@@ -132,10 +133,10 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_menos_clicked()
 {
     if (on){
-        if (this->vol > 20){
-            this->vol -= 10;
+        if (Tecla_Presionada(49) > 20){
+            Tecla_Presionada(50);
         }
-        ui->volLabel->setText(QString::number(this->vol));
+        ui->volLabel->setText(QString::number(Tecla_Presionada(49)));
     }
 }
 
@@ -143,10 +144,10 @@ void MainWindow::on_pushButton_menos_clicked()
 void MainWindow::on_pushButton_mas_clicked()
 {
     if (on){
-        if (this->vol < 100){
-            this->vol += 10;
+        if (Tecla_Presionada(49) < 100){
+            Tecla_Presionada(51);
         }
-        ui->volLabel->setText(QString::number(this->vol));
+        ui->volLabel->setText(QString::number(Tecla_Presionada(49)));
     }
 }
 
@@ -285,7 +286,7 @@ void MainWindow::reproducir(int freq, int id)
     }
     QString str = "qrc:/SFX/" + QString::number(freq) + ".wav";
     if (this->on){
-        this->player->setVolume(this->vol);
+        this->player->setVolume(Tecla_Presionada(49));
         this->player->setMedia(QUrl(str));
         this->player->play();
     }
@@ -296,147 +297,147 @@ void MainWindow::reproducir(int freq, int id)
 
 void MainWindow::on_Id_Do_1_pressed()
 {
-    int res = Tecla_Presionada(11);
+    int res = Tecla_Presionada(0);
     this->reproducir(res,1);
 }
 
 
 void MainWindow::on_Id_DoS_1_pressed()
 {
-    int res = Tecla_Presionada(21);
+    int res = Tecla_Presionada(1);
     this->reproducir(res,2);
 }
 
 void MainWindow::on_Id_Re_1_pressed()
 {
-    int res = Tecla_Presionada(31);
+    int res = Tecla_Presionada(2);
     this->reproducir(res,3);
 }
 
 void MainWindow::on_Id_ReS_1_pressed()
 {
-    int res = Tecla_Presionada(41);
+    int res = Tecla_Presionada(3);
     this->reproducir(res,4);
 }
 
 void MainWindow::on_Id_Mi_1_pressed()
 {
-    int res = Tecla_Presionada(51);
+    int res = Tecla_Presionada(4);
     this->reproducir(res,5);
 }
 
 void MainWindow::on_Id_Fa_1_pressed()
 {
-    int res = Tecla_Presionada(61);
+    int res = Tecla_Presionada(5);
     this->reproducir(res,6);
 }
 
 void MainWindow::on_Id_FaS_1_pressed()
 {
-    int res = Tecla_Presionada(71);
+    int res = Tecla_Presionada(6);
     this->reproducir(res,7);
 }
 
 void MainWindow::on_Id_Sol_1_pressed()
 {
-    int res = Tecla_Presionada(81);
+    int res = Tecla_Presionada(7);
     this->reproducir(res,8);
 }
 
 void MainWindow::on_Id_SolS_1_pressed()
 {
-    int res = Tecla_Presionada(91);
+    int res = Tecla_Presionada(8);
     this->reproducir(res,9);
 }
 
 void MainWindow::on_Id_La_1_pressed()
 {
-    int res = Tecla_Presionada(101);
+    int res = Tecla_Presionada(9);
     this->reproducir(res,10);
 }
 
 void MainWindow::on_Id_LaS_1_pressed()
 {
-    int res = Tecla_Presionada(111);
+    int res = Tecla_Presionada(10);
     this->reproducir(res,11);
 }
 
 void MainWindow::on_Id_Si_1_pressed()
 {
-    int res = Tecla_Presionada(121);
+    int res = Tecla_Presionada(11);
     this->reproducir(res,12);
 }
 
 void MainWindow::on_Id_Do_2_pressed()
 {
-    int res = Tecla_Presionada(11);
+    int res = Tecla_Presionada(12);
     this->reproducir(res,13);
 }
 
 
 void MainWindow::on_Id_DoS_2_pressed()
 {
-    int res = Tecla_Presionada(21);
+    int res = Tecla_Presionada(13);
     this->reproducir(res,14);
 }
 
 void MainWindow::on_Id_Re_2_pressed()
 {
-    int res = Tecla_Presionada(31);
+    int res = Tecla_Presionada(14);
     this->reproducir(res,15);
 }
 
 void MainWindow::on_Id_ReS_2_pressed()
 {
-    int res = Tecla_Presionada(41);
+    int res = Tecla_Presionada(15);
     this->reproducir(res,16);
 }
 
 void MainWindow::on_Id_Mi_2_pressed()
 {
-    int res = Tecla_Presionada(51);
+    int res = Tecla_Presionada(16);
     this->reproducir(res,17);
 }
 
 void MainWindow::on_Id_Fa_2_pressed()
 {
-    int res = Tecla_Presionada(61);
+    int res = Tecla_Presionada(17);
     this->reproducir(res,18);
 }
 
 void MainWindow::on_Id_FaS_2_pressed()
 {
-    int res = Tecla_Presionada(71);
+    int res = Tecla_Presionada(18);
     this->reproducir(res,19);
 }
 
 void MainWindow::on_Id_Sol_2_pressed()
 {
-    int res = Tecla_Presionada(81);
+    int res = Tecla_Presionada(19);
     this->reproducir(res,20);
 }
 
 void MainWindow::on_Id_SolS_2_pressed()
 {
-    int res = Tecla_Presionada(91);
+    int res = Tecla_Presionada(20);
     this->reproducir(res,21);
 }
 
 void MainWindow::on_Id_La_2_pressed()
 {
-    int res = Tecla_Presionada(101);
+    int res = Tecla_Presionada(21);
     this->reproducir(res,22);
 }
 
 void MainWindow::on_Id_LaS_2_pressed()
 {
-    int res = Tecla_Presionada(111);
+    int res = Tecla_Presionada(22);
     this->reproducir(res,23);
 }
 
 void MainWindow::on_Id_Si_2_pressed()
 {
-    int res = Tecla_Presionada(121);
+    int res = Tecla_Presionada(23);
     this->reproducir(res,24);
 }
 
@@ -582,4 +583,183 @@ void MainWindow::on_Id_LaS_2_released()
 void MainWindow::on_Id_Si_2_released()
 {
     ui->labelSi2->setPixmap(this->off);
+}
+
+
+void MainWindow::keyPressEvent(QKeyEvent * event)
+{
+    if (this->on && this->disp){
+        this->disp = false;
+        // Tecla Do 1
+        if (event->key() == Qt::Key_Q) {
+            this->on_Id_Do_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Do_1_released();
+        }
+        if (event->key() == Qt::Key_2) {
+            this->on_Id_DoS_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_DoS_1_released();
+        }
+        if (event->key() == Qt::Key_W) {
+            this->on_Id_Re_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Re_1_released();
+        }
+        if (event->key() == Qt::Key_3) {
+            this->on_Id_ReS_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_ReS_1_released();
+        }
+        if (event->key() == Qt::Key_E) {
+            this->on_Id_Mi_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Mi_1_released();
+        }
+        if (event->key() == Qt::Key_R) {
+            this->on_Id_Fa_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Fa_1_released();
+        }
+        if (event->key() == Qt::Key_5) {
+            this->on_Id_FaS_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_FaS_1_released();
+        }
+        if (event->key() == Qt::Key_T) {
+            this->on_Id_Sol_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Sol_1_released();
+        }
+        if (event->key() == Qt::Key_6) {
+            this->on_Id_SolS_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_SolS_1_released();
+        }
+        if (event->key() == Qt::Key_Y) {
+            this->on_Id_La_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_La_1_released();
+        }
+        if (event->key() == Qt::Key_7) {
+            this->on_Id_LaS_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_LaS_1_released();
+        }
+        if (event->key() == Qt::Key_U) {
+            this->on_Id_Si_1_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Si_1_released();
+        }
+        if (event->key() == Qt::Key_Z) {
+            this->on_Id_Do_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Do_2_released();
+        }
+        if (event->key() == Qt::Key_S) {
+            this->on_Id_DoS_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_DoS_2_released();
+        }
+        if (event->key() == Qt::Key_X) {
+            this->on_Id_Re_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Re_2_released();
+        }
+        if (event->key() == Qt::Key_D) {
+            this->on_Id_ReS_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_ReS_2_released();
+        }
+        if (event->key() == Qt::Key_C) {
+            this->on_Id_Mi_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Mi_2_released();
+        }
+        if (event->key() == Qt::Key_V) {
+            this->on_Id_Fa_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Fa_2_released();
+        }
+        if (event->key() == Qt::Key_G) {
+            this->on_Id_FaS_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_FaS_2_released();
+        }
+        if (event->key() == Qt::Key_B) {
+            this->on_Id_Sol_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Sol_2_released();
+        }
+        if (event->key() == Qt::Key_H) {
+            this->on_Id_SolS_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_SolS_2_released();
+        }
+        if (event->key() == Qt::Key_N) {
+            this->on_Id_La_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_La_2_released();
+        }
+        if (event->key() == Qt::Key_J) {
+            this->on_Id_LaS_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_LaS_2_released();
+        }
+        if (event->key() == Qt::Key_M) {
+            this->on_Id_Si_2_pressed();
+            QTime dieTime= QTime::currentTime().addMSecs(75);
+            while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+            this->on_Id_Si_2_released();
+        }
+
+        this->disp = true;
+    }
 }

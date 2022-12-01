@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QDir>
 #include <QtMultimedia>
-
+#include <QKeyEvent>
 #include <QMediaPlayer>
 #include <QPixmap>
 QT_BEGIN_NAMESPACE
@@ -125,6 +125,8 @@ private slots:
     void on_Id_Si_2_released();
 
 
+    void keyPressEvent(QKeyEvent * event);
+
 private:
     Ui::MainWindow *ui;
     QAudioOutput *audioOutput;
@@ -132,5 +134,6 @@ private:
     bool on;
     float vol;
     QPixmap off;
+    bool disp;
 };
 #endif // MAINWINDOW_H

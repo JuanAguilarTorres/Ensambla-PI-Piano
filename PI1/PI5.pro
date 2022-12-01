@@ -41,7 +41,32 @@ QMAKE_LFLAGS += \
     -no-pie
 
 DISTFILES += \
-    ../Downloads/EnsamblaPIPiano.rar
+    ../Downloads/EnsamblaPIPiano.rar \
+    SFX/261.wav \
+    SFX/277.wav \
+    SFX/293.wav \
+    SFX/311.wav \
+    SFX/329.wav \
+    SFX/349.wav \
+    SFX/369.wav \
+    SFX/391.wav \
+    SFX/415.wav \
+    SFX/440.wav \
+    SFX/446.wav \
+    SFX/493.wav \
+    SFX/523.wav \
+    SFX/554.wav \
+    SFX/587.wav \
+    SFX/622.wav \
+    SFX/659.wav \
+    SFX/698.wav \
+    SFX/739.wav \
+    SFX/783.wav \
+    SFX/830.wav \
+    SFX/880.wav \
+    SFX/932.wav \
+    SFX/987.wav \
+    SFX/SFX
 
 RESOURCES += \
     LED.qrc \
